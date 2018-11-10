@@ -4,7 +4,7 @@
     <div class="container mx-auto">
         <div class="nav flex justify-between items-center h-24">
             <div class="contact">
-                <a href="#" class="no-underline text-blue-dark hover:text-blue-darker">
+                <a href="mailto:me@thinky.cz" class="no-underline text-blue-dark hover:text-blue-darker">
                     <i class="text-xl fas fa-comments"></i><span class="inline-block font-semibold mx-2">Get in touch</span>
                 </a>
             </div>
