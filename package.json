@@ -19,6 +19,7 @@
         "laravel-mix-tailwind": "^0.1.0",
         "node-cmd": "^3.0.0",
         "on-build-webpack": "^0.1.0",
+        "tailwindcss": "^1.1.4",
         "webpack-watch": "^0.2.0",
         "yargs": "^4.6.0"
     }
