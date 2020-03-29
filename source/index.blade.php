@@ -56,16 +56,76 @@
                 <div class="md:flex">
                     <div class="p-4 md:w-1/2">
                         <a href="https://nulisec.com">
-                            <img class="rounded" src="assets/images/nulisechome.png" alt="Nulisec Marketplace">
+                            <img class="rounded" src="assets/images/nulisec.jpg" alt="Nulisec">
                         </a>
                     </div>
                     <div class="px-6 pt-8 pb-6 md:w-1/2 md:px-12 md:py-8 md:flex md:items-center">
                         <div>
                             <h3 class="text-white text-xl md:text-2xl font-medium hover:underline">
-                                <a href="https://nulisec.com">Nulisec Marketplace</a>
+                                <a href="https://nulisec.com">Nulisec</a>
                             </h3>
                             <div class="mt-2 md:mt-3 text-white antialiased font-medium text-sm md:text-md leading-tight md:leading-normal opacity-75">
                                 Nulisec is my startup company and the main project I am currently working on. We are building a European B2B marketplace focused on Consumer Packaged Goods.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:-mx-12 mt-6 sm:mt-12 rounded overflow-hidden shadow bg-teal-700">
+                <div class="md:flex">
+                    <div class="p-4 md:w-1/2">
+                        <a href="https://intermarketcompany.cz">
+                            <img class="rounded" src="assets/images/skytrade.jpg" alt="Skytrade">
+                        </a>
+                    </div>
+                    <div class="px-6 pt-8 pb-6 md:w-1/2 md:px-12 md:py-8 md:flex md:items-center">
+                        <div>
+                            <h3 class="text-white text-xl md:text-2xl font-medium hover:underline">
+                                <a href="https://intermarketcompany.cz">Skytrade</a>
+                            </h3>
+                            <div class="mt-2 md:mt-3 text-white antialiased font-medium text-sm md:text-md leading-tight md:leading-normal opacity-75">
+                                Skytrade is a name of my B2B Ecommerce platform. Written using Laravel, Vuejs, Tailwind CSS. Shops running on Skytrade include pttglobal.cz or intermarketcompany.cz
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:-mx-12 mt-6 sm:mt-12 rounded overflow-hidden shadow bg-green-700">
+                <div class="md:flex">
+                    <div class="p-4 md:w-1/2">
+                        <a href="https://mgns.cz">
+                            <img class="rounded" src="assets/images/magnus.jpg" alt="Magnus">
+                        </a>
+                    </div>
+                    <div class="px-6 pt-8 pb-6 md:w-1/2 md:px-12 md:py-8 md:flex md:items-center">
+                        <div>
+                            <h3 class="text-white text-xl md:text-2xl font-medium hover:underline">
+                                <a href="https://mgns.cz">Magnus</a>
+                            </h3>
+                            <div class="mt-2 md:mt-3 text-white antialiased font-medium text-sm md:text-md leading-tight md:leading-normal opacity-75">
+                                An E-learning platform and CMS to manage our Students, Lectors and Classes. Focused on the Vietnamese community in Czechia. Built using Laravel and Tailwind.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:-mx-12 mt-6 sm:mt-12 rounded overflow-hidden shadow bg-indigo-700">
+                <div class="md:flex">
+                    <div class="p-4 md:w-1/2">
+                        <a href="http://hanzi.thinky.cz">
+                            <img class="rounded" src="assets/images/hanzi.jpg" alt="Hanzi">
+                        </a>
+                    </div>
+                    <div class="px-6 pt-8 pb-6 md:w-1/2 md:px-12 md:py-8 md:flex md:items-center">
+                        <div>
+                            <h3 class="text-white text-xl md:text-2xl font-medium hover:underline">
+                                <a href="http://hanzi.thinky.cz">Hanzi</a>
+                            </h3>
+                            <div class="mt-2 md:mt-3 text-white antialiased font-medium text-sm md:text-md leading-tight md:leading-normal opacity-75">
+                                My first Vuejs project. I combined my coding skills and interest in Chinese language, and this is the result! It's a simple website that I used to learn Chinese Characters.
                             </div>
                         </div>
                     </div>
