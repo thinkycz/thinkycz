@@ -65,7 +65,7 @@
                                 <a href="https://nulisec.com">Nulisec</a>
                             </h3>
                             <div class="mt-2 md:mt-3 text-white antialiased font-medium text-sm md:text-md leading-tight md:leading-normal opacity-75">
-                                Nulisec is my startup company and the main project I am currently working on. We are building a European B2B marketplace focused on Consumer Packaged Goods.
+                                Nulisec is my startup company that I founded in 2017 with my friends. We are building a European B2B marketplace focused on Consumer Packaged Goods.
                             </div>
                         </div>
                     </div>
