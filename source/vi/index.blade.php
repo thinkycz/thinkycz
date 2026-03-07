@@ -1,3 +1,7 @@
+---
+language: vi
+---
+
 @extends('_layouts.master')
 
 @php
@@ -26,16 +30,16 @@ $socialLinks = [
 ];
 
 $skills = [
-'I make Web and iOS applications',
-'I love travelling and photography',
-'I learn Mandarin in my free time',
+'Mình tạo ra các trang Web và ứng dụng iOS',
+'Mình yêu thích du lịch và nhiếp ảnh',
+'Mình học tiếng Trung trong thời gian rảnh',
 ];
 
 $projects = [
 [
 'name' => 'Teacha',
 'url' => 'https://teacha.cz/',
-'description' => 'A premium beverage brand offering high-quality Matcha and customizable Bubble Tea experiences.',
+'description' => 'Một thương hiệu đồ uống cao cấp cung cấp Matcha chất lượng cao và Trà sữa tuỳ chọn.',
 'image' => '/assets/images/teacha.jpg',
 'color' => 'red',
 'badge' => 'Gastro',
@@ -43,7 +47,7 @@ $projects = [
 [
 'name' => 'StickerApp',
 'url' => 'https://stickerapp.thinky.cz/',
-'description' => 'A creative platform for designing and printing custom stickers with easy-to-use tools and high-quality results.',
+'description' => 'Một nền tảng sáng tạo để thiết kế và in các nhãn dán tùy chỉnh với các công cụ dễ sử dụng và kết quả chất lượng cao.',
 'image' => '/assets/images/stickerapp.jpg',
 'color' => 'yellow',
 'badge' => 'E-Commerce',
@@ -51,7 +55,7 @@ $projects = [
 [
 'name' => 'CashierApp',
 'url' => 'https://cashierapp.thinky.cz/',
-'description' => 'A modern web-based Point of Sale (POS) system designed to streamline checkout processes and manage sales efficiently.',
+'description' => 'Một hệ thống Điểm bán hàng (POS) trực tuyến hiện đại được thiết kế để hợp lý hóa quy trình thanh toán và quản lý bán hàng.',
 'image' => '/assets/images/cashierapp.jpg',
 'color' => 'purple',
 'badge' => 'POS',
@@ -59,7 +63,7 @@ $projects = [
 [
 'name' => 'UptimePro',
 'url' => 'https://uptimepro.thinky.cz/',
-'description' => 'A comprehensive uptime monitoring solution that ensures your websites and services stay online and performant.',
+'description' => 'Một giải pháp giám sát thời gian hoạt động toàn diện đảm bảo các trang web và dịch vụ của bạn luôn trực tuyến và có hiệu suất cao.',
 'image' => '/assets/images/uptimepro.jpg',
 'color' => 'orange',
 'badge' => 'SaaS',
@@ -67,7 +71,7 @@ $projects = [
 [
 'name' => 'Nulisec',
 'url' => 'https://nulisec.com',
-'description' => 'Co-founded in 2017, Nulisec is an innovative B2B marketplace startup driving the digital transformation of the Consumer Packaged Goods industry across Europe.',
+'description' => 'Đồng sáng lập vào năm 2017, Nulisec là một startup chợ điện tử B2B sáng tạo nhằm thúc đẩy quá trình chuyển đổi số của ngành hàng Tiêu dùng nhanh tại Châu Âu.',
 'image' => '/assets/images/nulisec.jpg',
 'color' => 'blue',
 'badge' => 'Startup',
@@ -75,7 +79,7 @@ $projects = [
 [
 'name' => 'Skytrade',
 'url' => 'https://intermarketcompany.cz',
-'description' => 'A comprehensive, modern B2B e-commerce platform built from the ground up with Laravel, Vue.js, and Tailwind CSS. It powers successful online businesses like pttglobal.cz and intermarketcompany.cz.',
+'description' => 'Một nền tảng thương mại điện tử B2B hiện đại, toàn diện được xây dựng từ đầu bằng Laravel, Vue.js và Tailwind CSS. Nền tảng đang vận hành các doanh nghiệp trực tuyến thành công như pttglobal.cz và intermarketcompany.cz.',
 'image' => '/assets/images/skytrade.jpg',
 'color' => 'teal',
 'badge' => 'E-Commerce',
@@ -84,7 +88,7 @@ $projects = [
 [
 'name' => 'Magnus',
 'url' => 'javascript:void(0)',
-'description' => 'A specialized e-learning platform and comprehensive CMS designed to empower the Vietnamese community in Czechia. It streamlines student, instructor, and schedule management for educational institutions.',
+'description' => 'Một nền tảng học trực tuyến (e-learning) chuyên biệt và hệ thống CMS toàn diện được thiết kế để hỗ trợ cộng đồng người Việt tại Cộng hoà Séc. Nó quản lý hiệu quả học viên, giáo viên và lịch học cho các cơ sở giáo dục.',
 'image' => '/assets/images/magnus.jpg',
 'color' => 'slate',
 'badge' => 'CMS / E-Learning',
@@ -93,7 +97,7 @@ $projects = [
 [
 'name' => 'Hanzi',
 'url' => 'http://hanzi.thinky.cz',
-'description' => 'Created out of a passion for language learning, Hanzi is an interactive web application designed to help users master Chinese characters. Built as a foundational project exploring the capabilities of Vue.js.',
+'description' => 'Được tạo ra từ niềm đam mê học ngoại ngữ, Hanzi là một ứng dụng web tương tác được thiết kế để giúp người dùng thành thạo chữ Hán. Được hoàn thiện như một dự án cơ sở để tìm hiểu về các khả năng của Vue.js.',
 'image' => '/assets/images/hanzi.jpg',
 'color' => 'indigo',
 'badge' => 'Personal',
@@ -119,7 +123,7 @@ $projects = [
                     <svg class="w-4 h-4 mr-2 text-blue-500 group-hover:scale-110 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                     </svg>
-                    Get in touch
+                    Liên hệ với mình
                 </a>
             </div>
             <div class="flex items-center space-x-4 bg-white/70 backdrop-blur-md border border-slate-200/50 rounded-full px-5 py-2.5 shadow-sm hover:shadow-md transition-shadow">
@@ -130,9 +134,9 @@ $projects = [
                 @endforeach
 
                 <div class="pl-4 ml-2 border-l border-slate-200 flex space-x-3 items-center">
-                    <a href="/" class="text-xs font-bold text-blue-600 tracking-wider">EN</a>
+                    <a href="/" class="text-xs font-semibold text-slate-400 hover:text-slate-900 transition-colors tracking-wider">EN</a>
                     <a href="/cs/" class="text-xs font-semibold text-slate-400 hover:text-slate-900 transition-colors tracking-wider">CS</a>
-                    <a href="/vi/" class="text-xs font-semibold text-slate-400 hover:text-slate-900 transition-colors tracking-wider">VI</a>
+                    <a href="/vi/" class="text-xs font-bold text-blue-600 tracking-wider">VI</a>
                 </div>
             </div>
         </header>
@@ -142,31 +146,31 @@ $projects = [
             <div class="md:flex justify-between items-center mb-28 gap-12">
                 <div class="md:w-2/3">
                     <h1 class="text-5xl md:text-7xl font-light text-slate-900 tracking-tight leading-tight">
-                        Long <span class="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Do</span>
+                        Long <span class="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Đỗ</span>
                     </h1>
                     <div class="mt-8 space-y-6 text-xl text-slate-600 font-light leading-relaxed">
-                        <p>Hi! My name is Hai Long Do, and my friends call me Leo.</p>
+                        <p>Xin chào! Mình tên là Hải Long Đỗ, bạn bè thường gọi mình là Leo.</p>
                         <ul class="space-y-4 mt-6">
                             <li class="flex items-center text-lg">
                                 <span class="bg-pink-100 text-pink-500 w-10 h-10 rounded-full flex items-center justify-center mr-4 shadow-sm text-xl shrink-0">
                                     💻
                                 </span>
-                                <span>I am a <span class="font-medium bg-pink-50 px-2.5 py-1 rounded-md text-pink-700 shadow-sm border border-pink-100">Full-stack Web Developer</span></span>
+                                <span>Mình là <span class="font-medium bg-pink-50 px-2.5 py-1 rounded-md text-pink-700 shadow-sm border border-pink-100">Lập trình viên Web Full-stack</span></span>
                             </li>
                             <li class="flex items-center text-lg">
                                 <span class="bg-blue-100 text-blue-500 w-10 h-10 rounded-full flex items-center justify-center mr-4 shadow-sm text-xl shrink-0">
                                     🚀
                                 </span>
-                                <span>Co-Founder of <span class="font-medium bg-blue-50 px-2.5 py-1 rounded-md text-blue-700 shadow-sm border border-blue-100">Nulisec s.r.o.</span></span>
+                                <span>Đồng sáng lập <span class="font-medium bg-blue-50 px-2.5 py-1 rounded-md text-blue-700 shadow-sm border border-blue-100">Nulisec s.r.o.</span></span>
                             </li>
                             <li class="flex items-center text-lg">
                                 <span class="bg-teal-100 text-teal-500 w-10 h-10 rounded-full flex items-center justify-center mr-4 shadow-sm text-xl shrink-0">
                                     🏢
                                 </span>
-                                <span>Developer at <span class="font-medium bg-teal-50 px-2.5 py-1 rounded-md text-teal-700 shadow-sm border border-teal-100">Pixelmate</span></span>
+                                <span>Lập trình viên tại <span class="font-medium bg-teal-50 px-2.5 py-1 rounded-md text-teal-700 shadow-sm border border-teal-100">Pixelmate</span></span>
                             </li>
                         </ul>
-                        <p class="text-2xl text-slate-800 font-medium mt-8">Let's be friends!</p>
+                        <p class="text-2xl text-slate-800 font-medium mt-8">Hãy kết bạn nhé!</p>
                     </div>
 
                     <ul class="mt-12 space-y-4 text-lg text-slate-600">
@@ -193,7 +197,7 @@ $projects = [
             <!-- Text / Experience Hook -->
             <div class="mb-24 flex flex-col items-center text-center max-w-2xl mx-auto animate-fade-in-up" style="animation-delay: 0.2s;">
                 <p class="text-xl text-slate-700 font-light leading-relaxed mb-6">
-                    👋 You might already be familiar with my work! For instance, I contributed to the development of the <span class="font-medium text-red-600 border-b border-red-200 pb-0.5">Vodafone Web Self Care</span> 📱 platform.
+                    👋 Có thể bạn đã thấy qua tác phẩm của mình! Điển hình, mình đã đóng góp vào sự phát triển của nền tảng <span class="font-medium text-red-600 border-b border-red-200 pb-0.5">Vodafone Web Self Care</span> 📱.
                 </p>
 
                 <div class="flex items-center justify-center w-full mb-6">
@@ -205,7 +209,7 @@ $projects = [
                 </div>
 
                 <p class="text-lg text-slate-500 font-light leading-relaxed italic">
-                    Beyond my public portfolio, I have collaborated on many other projects during my time at software agencies, and together with my team, we have completed dozens of successful projects. While non-disclosure agreements prevent me from sharing them, they have been instrumental in developing my skills.
+                    Ngoài danh mục dự án ở đây, mình đã hợp tác trong nhiều dự án khác trong thời gian làm việc tại các công ty phần mềm, và cùng với nhóm, chúng mình đã hoàn thành hàng chục dự án thành công. Mặc dù các thỏa thuận bảo mật không cho phép mình chia sẻ chúng, nhưng đó là những cơ hội rèn luyện rất quan trọng giúp phát triển kỹ năng của mình như hôm nay.
                 </p>
             </div>
 
@@ -230,7 +234,7 @@ $projects = [
                                         <svg class="w-4 h-4 mr-1.5 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path>
                                         </svg>
-                                        Archived Project
+                                        Dự án lưu trữ
                                     </div>
                                     @endif
                                     @if(isset($project['badge']))
@@ -305,7 +309,7 @@ $projects = [
         <!-- Footer -->
         <footer class="py-12 mt-12 flex flex-col items-center justify-center border-t border-slate-200/60 animate-fade-in-up" style="animation-delay: 0.4s;">
             <p class="text-slate-500 text-sm font-medium">
-                &copy; {{ date('Y') }} Hai Long Do.
+                &copy; {{ date('Y') }} Hai Long Do. Mọi quyển được bảo lưu.
             </p>
             <p class="text-slate-400 text-xs mt-2">
                 Designed & Built with Laravel, Tailwind, and ❤️

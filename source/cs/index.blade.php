@@ -136,6 +136,7 @@ $projects = [
                 <div class="pl-4 ml-2 border-l border-slate-200 flex space-x-3 items-center">
                     <a href="/" class="text-xs font-semibold text-slate-400 hover:text-slate-900 transition-colors tracking-wider">EN</a>
                     <a href="/cs/" class="text-xs font-bold text-blue-600 tracking-wider">CS</a>
+                    <a href="/vi/" class="text-xs font-semibold text-slate-400 hover:text-slate-900 transition-colors tracking-wider">VI</a>
                 </div>
             </div>
         </header>
@@ -148,7 +149,7 @@ $projects = [
                         Long <span class="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Do</span>
                     </h1>
                     <div class="mt-8 space-y-6 text-xl text-slate-600 font-light leading-relaxed">
-                        <p>Ahoj! Jmenuji se Long Do a kamarádi mi říkají Leo.</p>
+                        <p>Ahoj! Jmenuji se Hai Long Do a kamarádi mi říkají Leo.</p>
                         <ul class="space-y-4 mt-6">
                             <li class="flex items-center text-lg">
                                 <span class="bg-pink-100 text-pink-500 w-10 h-10 rounded-full flex items-center justify-center mr-4 shadow-sm text-xl shrink-0">
