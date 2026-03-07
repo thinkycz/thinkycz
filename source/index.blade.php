@@ -33,6 +33,30 @@ $skills = [
 
 $projects = [
 [
+'name' => 'StickerApp',
+'url' => 'http://stickerapp.thinky.cz/',
+'description' => 'A creative platform for designing and printing custom stickers with easy-to-use tools and high-quality results.',
+'image' => '/assets/images/stickerapp.jpg',
+'color' => 'yellow',
+'badge' => 'E-Commerce',
+],
+[
+'name' => 'CashierApp',
+'url' => 'https://cashierapp.thinky.cz/',
+'description' => 'A modern web-based Point of Sale (POS) system designed to streamline checkout processes and manage sales efficiently.',
+'image' => '/assets/images/cashierapp.jpg',
+'color' => 'purple',
+'badge' => 'POS',
+],
+[
+'name' => 'UptimePro',
+'url' => 'https://uptimepro.thinky.cz/',
+'description' => 'A comprehensive uptime monitoring solution that ensures your websites and services stay online and performant.',
+'image' => '/assets/images/uptimepro.jpg',
+'color' => 'orange',
+'badge' => 'SaaS',
+],
+[
 'name' => 'Nulisec',
 'url' => 'https://nulisec.com',
 'description' => 'Co-founded in 2017, Nulisec is an innovative B2B marketplace startup driving the digital transformation of the Consumer Packaged Goods industry across Europe.',
@@ -183,7 +207,7 @@ $projects = [
                     <a href="{{ $project['url'] }}" target="_blank" class="group flex flex-col bg-white/60 backdrop-blur-sm rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 border border-white shrink-0 w-[85vw] md:w-[400px] snap-center">
                         <div class="bg-{{ $project['color'] }}-50 relative overflow-hidden h-48 md:h-56 shrink-0">
                             <div class="absolute inset-0 bg-{{ $project['color'] }}-500 opacity-0 group-hover:opacity-10 transition-opacity duration-500 z-10 mix-blend-multiply"></div>
-                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="{{ $project['image'] }}" alt="{{ $project['name'] }}">
+                            <img class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out" src="{{ $project['image'] }}" alt="{{ $project['name'] }}">
                         </div>
                         <div class="p-8 flex flex-col flex-grow bg-white/40 border-t border-white/50">
                             @if(isset($project['badge']))

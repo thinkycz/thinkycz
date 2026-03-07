@@ -5,6 +5,16 @@ module.exports = {
     './source/**/*.md',
     './source/**/*.html',
   ],
+  safelist: [
+    {
+      pattern: /bg-(blue|teal|green|indigo|orange|purple|yellow|pink|slate)-(50|100|200|500)/,
+      variants: ['hover', 'group-hover'],
+    },
+    {
+      pattern: /text-(blue|teal|green|indigo|orange|purple|yellow|pink|slate)-(400|500|600|700)/,
+      variants: ['hover', 'group-hover'],
+    },
+  ],
   theme: {
     extend: {
       animation: {
