@@ -1,4 +1,19 @@
-/** @type {import('tailwindcss').Config} */
+const colors = require('tailwindcss/colors')
+
+const fullColorPaletteSafelist = []
+const colorTypes = ['bg', 'text', 'border']
+const shadeValues = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900]
+
+Object.keys(colors).forEach(color => {
+  if (typeof colors[color] === 'object') {
+    shadeValues.forEach(shade => {
+      colorTypes.forEach(type => {
+        fullColorPaletteSafelist.push(`${type}-${color}-${shade}`)
+      })
+    })
+  }
+})
+
 module.exports = {
   content: [
     './source/**/*.blade.php',
@@ -6,14 +21,15 @@ module.exports = {
     './source/**/*.html',
   ],
   safelist: [
+    ...fullColorPaletteSafelist,
     {
-      pattern: /bg-(blue|teal|green|indigo|orange|purple|yellow|pink|slate)-(50|100|200|500)/,
+      pattern: /bg-./,
       variants: ['hover', 'group-hover'],
     },
     {
-      pattern: /text-(blue|teal|green|indigo|orange|purple|yellow|pink|slate)-(400|500|600|700)/,
+      pattern: /text-./,
       variants: ['hover', 'group-hover'],
-    },
+    }
   ],
   theme: {
     extend: {
@@ -21,6 +37,7 @@ module.exports = {
         'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
         'fade-in': 'fadeIn 1s ease-out forwards',
         'blob': 'blob 7s infinite',
+        'carousel': 'carousel 40s linear infinite',
       },
       keyframes: {
         fadeInUp: {
@@ -36,6 +53,10 @@ module.exports = {
           '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
           '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
           '100%': { transform: 'translate(0px, 0px) scale(1)' },
+        },
+        carousel: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
         }
       }
     },

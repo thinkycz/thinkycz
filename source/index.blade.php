@@ -33,8 +33,16 @@ $skills = [
 
 $projects = [
 [
+'name' => 'Teacha',
+'url' => 'https://teacha.cz/',
+'description' => 'A premium beverage brand offering high-quality Matcha and customizable Bubble Tea experiences.',
+'image' => '/assets/images/teacha.jpg',
+'color' => 'red',
+'badge' => 'Gastro',
+],
+[
 'name' => 'StickerApp',
-'url' => 'http://stickerapp.thinky.cz/',
+'url' => 'https://stickerapp.thinky.cz/',
 'description' => 'A creative platform for designing and printing custom stickers with easy-to-use tools and high-quality results.',
 'image' => '/assets/images/stickerapp.jpg',
 'color' => 'yellow',
@@ -75,11 +83,12 @@ $projects = [
 ],
 [
 'name' => 'Magnus',
-'url' => 'https://mgns.cz',
+'url' => 'javascript:void(0)',
 'description' => 'A specialized e-learning platform and comprehensive CMS designed to empower the Vietnamese community in Czechia. It streamlines student, instructor, and schedule management for educational institutions.',
 'image' => '/assets/images/magnus.jpg',
-'color' => 'green',
+'color' => 'slate',
 'badge' => 'CMS / E-Learning',
+'offline' => true,
 ],
 [
 'name' => 'Hanzi',
@@ -195,38 +204,99 @@ $projects = [
                 </div>
 
                 <p class="text-lg text-slate-500 font-light leading-relaxed italic">
-                    Beyond my public portfolio, I have collaborated on numerous high-profile projects through my work at software agencies. While confidentiality agreements keep these under wraps, they have been instrumental in refining my expertise.
+                    Beyond my public portfolio, I have collaborated on many other projects during my time at software agencies, and together with my team, we have completed dozens of successful projects. While non-disclosure agreements prevent me from sharing them, they have been instrumental in developing my skills.
                 </p>
             </div>
 
-            <!-- Projects Section (Horizontal Scroll) -->
-            <section class="animate-fade-in-up w-[100vw] relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] overflow-hidden" style="animation-delay: 0.3s;">
-                <!-- Full-bleed Horizontal Scroll Container -->
-                <div class="flex overflow-x-auto pb-12 pt-4 px-6 md:px-12 space-x-6 md:space-x-8 snap-x snap-mandatory scrollbar-hide -webkit-overflow-scrolling-touch hide-scrollbars">
-                    @foreach($projects as $project)
-                    <a href="{{ $project['url'] }}" target="_blank" class="group flex flex-col bg-white/60 backdrop-blur-sm rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 border border-white shrink-0 w-[85vw] md:w-[400px] snap-center">
-                        <div class="bg-{{ $project['color'] }}-50 relative overflow-hidden h-48 md:h-56 shrink-0">
-                            <div class="absolute inset-0 bg-{{ $project['color'] }}-500 opacity-0 group-hover:opacity-10 transition-opacity duration-500 z-10 mix-blend-multiply"></div>
-                            <img class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out" src="{{ $project['image'] }}" alt="{{ $project['name'] }}">
+            <!-- Projects Section (Infinite Carousel) -->
+            <section class="animate-fade-in-up w-[100vw] relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] overflow-hidden flex group" style="animation-delay: 0.3s; padding-bottom: 3rem; padding-top: 1rem;">
+                <!-- Full-bleed Infinite Carousel Container -->
+                <div class="flex w-max animate-carousel group-hover:[animation-play-state:paused]">
+                    <div class="flex gap-6 md:gap-8 pr-6 md:pr-8 w-max">
+                        @foreach($projects as $project)
+                        @if(isset($project['offline']))
+                        <div class="group/card flex flex-col bg-white/60 backdrop-blur-sm rounded-3xl overflow-hidden shadow-sm border border-white shrink-0 w-[85vw] md:w-[400px] cursor-not-allowed opacity-80 mix-blend-luminosity">
+                            @else
+                            <a href="{{ $project['url'] }}" target="_blank" class="group/card flex flex-col bg-white/60 backdrop-blur-sm rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 border border-white shrink-0 w-[85vw] md:w-[400px]">
+                                @endif
+                                <div class="bg-{{ $project['color'] }}-50 relative overflow-hidden h-48 md:h-56 shrink-0">
+                                    <div class="absolute inset-0 bg-{{ $project['color'] }}-500 opacity-0 group-hover/card:opacity-10 transition-opacity duration-500 z-10 mix-blend-multiply"></div>
+                                    <img class="w-full h-full object-cover object-top @if(!isset($project['offline'])) group-hover/card:scale-105 @endif transition-transform duration-700 ease-out" src="{{ $project['image'] }}" alt="{{ $project['name'] }}">
+                                </div>
+                                <div class="p-8 flex flex-col flex-grow bg-white/40 border-t border-white/50 relative">
+                                    @if(isset($project['offline']))
+                                    <div class="absolute top-6 right-8 flex items-center text-slate-500 text-sm italic font-medium">
+                                        <svg class="w-4 h-4 mr-1.5 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path>
+                                        </svg>
+                                        Archived Project
+                                    </div>
+                                    @endif
+                                    @if(isset($project['badge']))
+                                    <span class="inline-block px-3 py-1 bg-{{ $project['color'] }}-100 text-{{ $project['color'] }}-700 text-xs font-bold rounded-full uppercase tracking-wider mb-4 self-start">
+                                        {{ $project['badge'] }}
+                                    </span>
+                                    @endif
+                                    <h3 class="text-2xl font-medium text-slate-900 @if(!isset($project['offline'])) group-hover/card:text-{{ $project['color'] }}-600 @endif transition-colors mb-4 flex items-center justify-between">
+                                        {{ $project['name'] }}
+                                        @if(!isset($project['offline']))
+                                        <svg class="w-5 h-5 opacity-0 -translate-x-2 group-hover/card:opacity-100 group-hover/card:translate-x-0 transition-all duration-500 ease-out" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                        </svg>
+                                        @endif
+                                    </h3>
+                                    <p class="text-slate-600 leading-relaxed text-base">
+                                        {{ $project['description'] }}
+                                    </p>
+                                </div>
+                                @if(isset($project['offline']))
                         </div>
-                        <div class="p-8 flex flex-col flex-grow bg-white/40 border-t border-white/50">
-                            @if(isset($project['badge']))
-                            <span class="inline-block px-3 py-1 bg-{{ $project['color'] }}-100 text-{{ $project['color'] }}-700 text-xs font-bold rounded-full uppercase tracking-wider mb-4 self-start">
-                                {{ $project['badge'] }}
-                            </span>
-                            @endif
-                            <h3 class="text-2xl font-medium text-slate-900 group-hover:text-{{ $project['color'] }}-600 transition-colors mb-4 flex items-center justify-between">
-                                {{ $project['name'] }}
-                                <svg class="w-5 h-5 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 ease-out" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                            </h3>
-                            <p class="text-slate-600 leading-relaxed text-base">
-                                {{ $project['description'] }}
-                            </p>
+                        @else
+                        </a>
+                        @endif
+                        @endforeach
+                    </div>
+                    <div class="flex gap-6 md:gap-8 pr-6 md:pr-8 w-max" aria-hidden="true">
+                        @foreach($projects as $project)
+                        @if(isset($project['offline']))
+                        <div class="group/card flex flex-col bg-white/60 backdrop-blur-sm rounded-3xl overflow-hidden shadow-sm border border-white shrink-0 w-[85vw] md:w-[400px] cursor-not-allowed opacity-80 mix-blend-luminosity">
+                            @else
+                            <a href="{{ $project['url'] }}" target="_blank" class="group/card flex flex-col bg-white/60 backdrop-blur-sm rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 border border-white shrink-0 w-[85vw] md:w-[400px]">
+                                @endif
+                                <div class="bg-{{ $project['color'] }}-50 relative overflow-hidden h-48 md:h-56 shrink-0">
+                                    <div class="absolute inset-0 bg-{{ $project['color'] }}-500 opacity-0 group-hover/card:opacity-10 transition-opacity duration-500 z-10 mix-blend-multiply"></div>
+                                    <img class="w-full h-full object-cover object-top @if(!isset($project['offline'])) group-hover/card:scale-105 @endif transition-transform duration-700 ease-out" src="{{ $project['image'] }}" alt="{{ $project['name'] }}">
+                                </div>
+                                <div class="p-8 flex flex-col flex-grow bg-white/40 border-t border-white/50 relative">
+                                    @if(isset($project['offline']))
+                                    <div class="absolute top-6 right-6 flex items-center bg-red-100 text-red-700 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                                        <span class="w-2 h-2 rounded-full bg-red-500 mr-2 animate-pulse"></span> Offline
+                                    </div>
+                                    @endif
+                                    @if(isset($project['badge']))
+                                    <span class="inline-block px-3 py-1 bg-{{ $project['color'] }}-100 text-{{ $project['color'] }}-700 text-xs font-bold rounded-full uppercase tracking-wider mb-4 self-start">
+                                        {{ $project['badge'] }}
+                                    </span>
+                                    @endif
+                                    <h3 class="text-2xl font-medium text-slate-900 @if(!isset($project['offline'])) group-hover/card:text-{{ $project['color'] }}-600 @endif transition-colors mb-4 flex items-center justify-between">
+                                        {{ $project['name'] }}
+                                        @if(!isset($project['offline']))
+                                        <svg class="w-5 h-5 opacity-0 -translate-x-2 group-hover/card:opacity-100 group-hover/card:translate-x-0 transition-all duration-500 ease-out" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                        </svg>
+                                        @endif
+                                    </h3>
+                                    <p class="text-slate-600 leading-relaxed text-base">
+                                        {{ $project['description'] }}
+                                    </p>
+                                </div>
+                                @if(isset($project['offline']))
                         </div>
-                    </a>
-                    @endforeach
+                        @else
+                        </a>
+                        @endif
+                        @endforeach
+                    </div>
                 </div>
             </section>
         </main>
