@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ $page->language ?? 'en' }}">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
-        <title>@yield('title', 'Long\'s portfolio')</title>
+        <title>@yield('title', 'Hai Long Do - Portfolio')</title>
 
         <link rel="apple-touch-icon" sizes="57x57" href="/assets/images/favicons/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="/assets/images/favicons/apple-icon-60x60.png">
@@ -35,7 +35,7 @@
             gtag('config', 'UA-111744978-1');
         </script>
     </head>
-    <body class="antialiased">
+    <body class="antialiased text-gray-800 bg-gray-50 font-sans leading-normal">
         @yield('body')
     </body>
 </html>
