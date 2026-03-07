@@ -1,3 +1,7 @@
+---
+language: cs
+---
+
 @extends('_layouts.master')
 
 @section('body')
@@ -6,7 +10,7 @@
             <div class="flex items-center space-x-6">
                 <a href="mailto:me@thinky.cz" class="text-blue-600 hover:text-blue-800 font-semibold flex items-center transition-colors">
                     <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                    Get in touch
+                    Napište mi
                 </a>
             </div>
             <div class="flex items-center space-x-4">
@@ -21,9 +25,9 @@
                 </a>
 
                 <div class="pl-4 ml-4 border-l border-gray-200 flex space-x-2">
-                    <a href="/" class="text-sm font-medium text-blue-600">EN</a>
+                    <a href="/" class="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors">EN</a>
                     <span class="text-sm text-gray-300">|</span>
-                    <a href="/cs/" class="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors">CS</a>
+                    <a href="/cs/" class="text-sm font-medium text-blue-600">CS</a>
                 </div>
             </div>
         </header>
@@ -33,15 +37,15 @@
                 <div class="md:w-2/3 pr-8">
                     <h1 class="text-4xl md:text-6xl font-light text-gray-900 tracking-tight">Hai Long Do</h1>
                     <div class="mt-6 space-y-4 text-xl text-gray-600 font-light leading-relaxed">
-                        <p>Hi! My name is Hai Long Do, and my friends call me Leo.</p>
-                        <p>I am a Laravel <span class="text-pink-600 font-medium">Web Developer</span> &amp; Co-Founder of <span class="text-blue-600 font-medium">Nulisec s.r.o.</span></p>
-                        <p>Let's be friends!</p>
+                        <p>Ahoj! Jmenuji se Hai Long Do a kamarádi mi říkají Leo.</p>
+                        <p>Jsem Laravel <span class="text-pink-600 font-medium">Web Developer</span> a spoluzakladatel <span class="text-blue-600 font-medium">Nulisec s.r.o.</span></p>
+                        <p>Pojďme se spřátelit!</p>
                     </div>
 
                     <ul class="mt-12 space-y-3 text-lg text-gray-600">
-                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> I make Web and iOS applications</li>
-                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> I love travelling and photography</li>
-                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> I learn Mandarin in my free time</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Tvořím webové a iOS aplikace</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Miluji cestování a fotografování</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Ve volném čase se učím mandarínštinu</li>
                     </ul>
                 </div>
                 <div class="md:w-1/3 hidden md:block">
@@ -54,13 +58,13 @@
 
             <div class="text-center mb-24">
                 <a href="https://thinkycz.tumblr.com" target="_blank" class="inline-flex flex-col items-center group">
-                    <span class="text-xl font-medium text-gray-800 group-hover:text-blue-600 transition-colors">Visit my blog on Tumblr</span>
+                    <span class="text-xl font-medium text-gray-800 group-hover:text-blue-600 transition-colors">Navštivte můj blog na Tumblru</span>
                     <span class="w-12 h-1 bg-blue-600 mt-4 group-hover:w-24 transition-all duration-300"></span>
                 </a>
             </div>
 
             <section>
-                <h2 class="text-3xl font-light text-gray-900 mb-10">My Projects</h2>
+                <h2 class="text-3xl font-light text-gray-900 mb-10">Moje projekty</h2>
 
                 <div class="space-y-8">
                     <a href="https://nulisec.com" target="_blank" class="block group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow border border-gray-100">
@@ -71,7 +75,7 @@
                             <div class="p-8 md:w-3/5 flex flex-col justify-center">
                                 <h3 class="text-2xl font-medium text-gray-900 group-hover:text-blue-600 transition-colors">Nulisec</h3>
                                 <p class="mt-3 text-gray-600 leading-relaxed">
-                                    Nulisec is my startup company that I founded in 2017 with my friends. We are building a European B2B marketplace focused on Consumer Packaged Goods.
+                                    Nulisec je můj startup, který jsem založil v roce 2017 s kamarády. Budujeme evropské B2B tržiště zaměřené na rychloobrátkové spotřební zboží.
                                 </p>
                             </div>
                         </div>
@@ -85,7 +89,7 @@
                             <div class="p-8 md:w-3/5 flex flex-col justify-center">
                                 <h3 class="text-2xl font-medium text-gray-900 group-hover:text-teal-600 transition-colors">Skytrade</h3>
                                 <p class="mt-3 text-gray-600 leading-relaxed">
-                                    Skytrade is a name of my B2B Ecommerce platform. Written using Laravel, Vuejs, Tailwind CSS. Shops running on Skytrade include pttglobal.cz or intermarketcompany.cz.
+                                    Skytrade je název mé B2B e-commerce platformy. Napsáno pomocí Laravel, Vuejs a Tailwind CSS. Obchody běžící na Skytrade zahrnují pttglobal.cz nebo intermarketcompany.cz.
                                 </p>
                             </div>
                         </div>
@@ -99,7 +103,7 @@
                             <div class="p-8 md:w-3/5 flex flex-col justify-center">
                                 <h3 class="text-2xl font-medium text-gray-900 group-hover:text-green-600 transition-colors">Magnus</h3>
                                 <p class="mt-3 text-gray-600 leading-relaxed">
-                                    An E-learning platform and CMS to manage our Students, Lectors and Classes. Focused on the Vietnamese community in Czechia. Built using Laravel and Tailwind.
+                                    E-learningová platforma a CMS pro správu našich studentů, lektorů a tříd. Zaměřeno na vietnamskou komunitu v Česku. Postaveno pomocí Laravel a Tailwind.
                                 </p>
                             </div>
                         </div>
@@ -113,7 +117,7 @@
                             <div class="p-8 md:w-3/5 flex flex-col justify-center">
                                 <h3 class="text-2xl font-medium text-gray-900 group-hover:text-indigo-600 transition-colors">Hanzi</h3>
                                 <p class="mt-3 text-gray-600 leading-relaxed">
-                                    My first Vuejs project. I combined my coding skills and interest in Chinese language, and this is the result! It's a simple website that I used to learn Chinese Characters.
+                                    Můj první Vuejs projekt. Zkombinoval jsem své programátorské dovednosti a zájem o čínštinu a toto je výsledek! Je to jednoduchá webová stránka, kterou jsem používal k učení čínských znaků.
                                 </p>
                             </div>
                         </div>
@@ -123,7 +127,7 @@
         </main>
 
         <footer class="py-10 text-center text-gray-500 text-sm border-t border-gray-100">
-            &copy; {{ date('Y') }} Hai Long Do. All rights reserved.
+            &copy; {{ date('Y') }} Hai Long Do. Všechna práva vyhrazena.
         </footer>
     </div>
 @endsection
