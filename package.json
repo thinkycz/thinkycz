@@ -3,11 +3,11 @@
     "scripts": {
         "local": "vite",
         "staging": "vite build",
-        "production": "vite build",
+        "production": "vite build && npm run deploy",
         "dev": "vite",
         "build": "vite build",
         "watch": "vite build --watch",
-        "deploy": "git subtree push --prefix build_production origin gh-pages"
+        "deploy": "git push origin $(git subtree split --prefix build_production HEAD):gh-pages --force"
     },
     "devDependencies": {
         "@tailwindcss/forms": "^0.5.11",
