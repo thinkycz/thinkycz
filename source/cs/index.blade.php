@@ -70,7 +70,7 @@ $projects = [
 ],
 [
 'name' => 'Nulisec',
-'url' => 'https://nulisec.com',
+'url' => 'https://nulisec.thinky.cz/app/home',
 'description' => 'Nulisec je můj startup, který jsem založil v roce 2017 s kamarády. Budujeme evropské B2B tržiště zaměřené na rychloobrátkové spotřební zboží.',
 'image' => '/assets/images/nulisec.jpg',
 'color' => 'blue',
@@ -93,6 +93,14 @@ $projects = [
 'color' => 'slate',
 'badge' => 'CMS / E-Learning',
 'offline' => true,
+],
+[
+'name' => 'Magisek',
+'url' => 'https://magisek.thinky.cz/',
+'description' => 'Moderní e-commerce platforma pro český maloobchod, s katalogem produktů, košíkem a uživatelskými účty. Postaveno na enginu Pluli.com s čistým a responzivním designem.',
+'image' => '/assets/images/magisek.jpg',
+'color' => 'emerald',
+'badge' => 'E-Commerce',
 ],
 [
 'name' => 'Hanzi',

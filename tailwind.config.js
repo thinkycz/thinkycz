@@ -4,15 +4,19 @@ const fullColorPaletteSafelist = []
 const colorTypes = ['bg', 'text', 'border']
 const shadeValues = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900]
 
-Object.keys(colors).forEach(color => {
-  if (typeof colors[color] === 'object') {
-    shadeValues.forEach(shade => {
-      colorTypes.forEach(type => {
-        fullColorPaletteSafelist.push(`${type}-${color}-${shade}`)
+const deprecatedColors = ['lightBlue', 'warmGray', 'trueGray', 'coolGray', 'blueGray']
+
+Object.keys(colors)
+  .filter(color => !deprecatedColors.includes(color))
+  .forEach(color => {
+    if (typeof colors[color] === 'object') {
+      shadeValues.forEach(shade => {
+        colorTypes.forEach(type => {
+          fullColorPaletteSafelist.push(`${type}-${color}-${shade}`)
+        })
       })
-    })
-  }
-})
+    }
+  })
 
 module.exports = {
   content: [

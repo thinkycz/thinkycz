@@ -70,7 +70,7 @@ $projects = [
 ],
 [
 'name' => 'Nulisec',
-'url' => 'https://nulisec.com',
+'url' => 'https://nulisec.thinky.cz/app/home',
 'description' => 'Đồng sáng lập vào năm 2017, Nulisec là một startup chợ điện tử B2B sáng tạo nhằm thúc đẩy quá trình chuyển đổi số của ngành hàng Tiêu dùng nhanh tại Châu Âu.',
 'image' => '/assets/images/nulisec.jpg',
 'color' => 'blue',
@@ -93,6 +93,14 @@ $projects = [
 'color' => 'slate',
 'badge' => 'CMS / E-Learning',
 'offline' => true,
+],
+[
+'name' => 'Magisek',
+'url' => 'https://magisek.thinky.cz/',
+'description' => 'Một nền tảng thương mại điện tử hiện đại cho thương hiệu bán lẻ Séc, với danh mục sản phẩm, giỏ hàng và tài khoản người dùng. Được xây dựng với thiết kế sạch sẽ và đáp ứng, vận hành bởi Pluli.com.',
+'image' => '/assets/images/magisek.jpg',
+'color' => 'emerald',
+'badge' => 'E-Commerce',
 ],
 [
 'name' => 'Hanzi',

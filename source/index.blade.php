@@ -66,7 +66,7 @@ $projects = [
 ],
 [
 'name' => 'Nulisec',
-'url' => 'https://nulisec.com',
+'url' => 'https://nulisec.thinky.cz/app/home',
 'description' => 'Co-founded in 2017, Nulisec is an innovative B2B marketplace startup driving the digital transformation of the Consumer Packaged Goods industry across Europe.',
 'image' => '/assets/images/nulisec.jpg',
 'color' => 'blue',
@@ -89,6 +89,14 @@ $projects = [
 'color' => 'slate',
 'badge' => 'CMS / E-Learning',
 'offline' => true,
+],
+[
+'name' => 'Magisek',
+'url' => 'https://magisek.thinky.cz/',
+'description' => 'A modern e-commerce platform for a Czech retail brand, featuring a product catalog, basket, and user accounts. Built with a clean, responsive design powered by the Pluli.com engine.',
+'image' => '/assets/images/magisek.jpg',
+'color' => 'emerald',
+'badge' => 'E-Commerce',
 ],
 [
 'name' => 'Hanzi',
