@@ -3,9 +3,10 @@
     "scripts": {
         "local": "vite",
         "staging": "vite build",
-        "production": "vite build && npm run deploy",
+        "production": "npm run build && npm run deploy",
         "dev": "vite",
-        "build": "vite build",
+        "build": "vite build && npm run check:seo",
+        "check:seo": "php scripts/check-seo.php",
         "watch": "vite build --watch",
         "deploy": "git push origin $(git subtree split --prefix build_production HEAD):gh-pages --force"
     },

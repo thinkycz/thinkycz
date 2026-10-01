@@ -1,0 +1,5 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+@foreach($page->languagePaths as $path)
+    <url><loc>{{ $page->seoOrigin . $path }}</loc></url>
+@endforeach
+</urlset>

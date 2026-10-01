@@ -1,3 +1,12 @@
+---
+language: en
+title: "Hai Long Do | Web & iOS Developer Portfolio"
+description: "Explore Hai Long Do’s portfolio of web and iOS applications, Laravel and Vue.js projects, and entrepreneurial work including Nulisec."
+projectsHeading: "My projects"
+profileAlt: "Portrait of Hai Long Do"
+projectAlt: "Screenshot of the %s project"
+---
+
 @extends('_layouts.master')
 
 @php
@@ -150,7 +159,7 @@ $projects = [
             <div class="md:flex justify-between items-center mb-28 gap-12">
                 <div class="md:w-2/3">
                     <h1 class="text-5xl md:text-7xl font-light text-slate-900 tracking-tight leading-tight">
-                        Long <span class="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Do</span>
+                        Hai Long <span class="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Do</span>
                     </h1>
                     <div class="mt-8 space-y-6 text-xl text-slate-600 font-light leading-relaxed">
                         <p>Hi! My name is Hai Long Do, and my friends call me Leo.</p>
@@ -193,7 +202,7 @@ $projects = [
                 <div class="md:w-1/3 mt-16 md:mt-0 flex justify-center md:justify-end shrink-0">
                     <div class="relative group cursor-pointer">
                         <div class="absolute inset-0 bg-gradient-to-tr from-blue-400 to-teal-300 rounded-full transform translate-x-4 translate-y-4 group-hover:translate-x-6 group-hover:translate-y-6 transition-transform duration-500 opacity-60"></div>
-                        <img src="/assets/images/profile.jpg" alt="Profile" class="relative rounded-full w-64 h-64 md:w-full md:h-auto object-cover aspect-square shadow-2xl border-4 border-white group-hover:-translate-y-2 transition-transform duration-500">
+                        <img src="/assets/images/profile.jpg" alt="{{ $page->profileAlt }}" width="{{ $page->imageDimensions[$page->socialImage]['width'] }}" height="{{ $page->imageDimensions[$page->socialImage]['height'] }}" loading="eager" class="relative rounded-full w-64 h-64 md:w-full md:h-auto object-cover aspect-square shadow-2xl border-4 border-white group-hover:-translate-y-2 transition-transform duration-500">
                     </div>
                 </div>
             </div>
@@ -217,8 +226,10 @@ $projects = [
                 </p>
             </div>
 
+            <h2 id="projects-heading" class="text-3xl font-medium text-slate-900 mb-8">{{ $page->projectsHeading }}</h2>
+
             <!-- Projects Section (Infinite Carousel) -->
-            <section class="animate-fade-in-up w-[100vw] relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] overflow-hidden flex group" style="animation-delay: 0.3s; padding-bottom: 3rem; padding-top: 1rem;">
+            <section aria-labelledby="projects-heading" class="animate-fade-in-up w-[100vw] relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] overflow-hidden flex group" style="animation-delay: 0.3s; padding-bottom: 3rem; padding-top: 1rem;">
                 <!-- Full-bleed Infinite Carousel Container -->
                 <div class="flex w-max animate-carousel group-hover:[animation-play-state:paused]">
                     <div class="flex gap-6 md:gap-8 pr-6 md:pr-8 w-max">
@@ -230,7 +241,7 @@ $projects = [
                                 @endif
                                 <div class="bg-{{ $project['color'] }}-50 relative overflow-hidden h-48 md:h-56 shrink-0">
                                     <div class="absolute inset-0 bg-{{ $project['color'] }}-500 opacity-0 group-hover/card:opacity-10 transition-opacity duration-500 z-10 mix-blend-multiply"></div>
-                                    <img class="w-full h-full object-cover object-top @if(!isset($project['offline'])) group-hover/card:scale-105 @endif transition-transform duration-700 ease-out" src="{{ $project['image'] }}" alt="{{ $project['name'] }}">
+                                    <img class="w-full h-full object-cover object-top @if(!isset($project['offline'])) group-hover/card:scale-105 @endif transition-transform duration-700 ease-out" src="{{ $project['image'] }}" alt="{{ sprintf($page->projectAlt, $project['name']) }}" width="{{ $page->imageDimensions[$project['image']]['width'] }}" height="{{ $page->imageDimensions[$project['image']]['height'] }}" loading="lazy" decoding="async">
                                 </div>
                                 <div class="p-8 flex flex-col flex-grow bg-white/40 border-t border-white/50 relative">
                                     @if(isset($project['offline']))
@@ -274,7 +285,7 @@ $projects = [
                                 @endif
                                 <div class="bg-{{ $project['color'] }}-50 relative overflow-hidden h-48 md:h-56 shrink-0">
                                     <div class="absolute inset-0 bg-{{ $project['color'] }}-500 opacity-0 group-hover/card:opacity-10 transition-opacity duration-500 z-10 mix-blend-multiply"></div>
-                                    <img class="w-full h-full object-cover object-top @if(!isset($project['offline'])) group-hover/card:scale-105 @endif transition-transform duration-700 ease-out" src="{{ $project['image'] }}" alt="{{ $project['name'] }}">
+                                    <img class="w-full h-full object-cover object-top @if(!isset($project['offline'])) group-hover/card:scale-105 @endif transition-transform duration-700 ease-out" src="{{ $project['image'] }}" alt="{{ sprintf($page->projectAlt, $project['name']) }}" width="{{ $page->imageDimensions[$project['image']]['width'] }}" height="{{ $page->imageDimensions[$project['image']]['height'] }}" loading="lazy" decoding="async">
                                 </div>
                                 <div class="p-8 flex flex-col flex-grow bg-white/40 border-t border-white/50 relative">
                                     @if(isset($project['offline']))
